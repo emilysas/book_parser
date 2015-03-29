@@ -5,20 +5,21 @@ using System.Collections.Generic;
 namespace book_parser
 {
 	[TestFixture ()]
-	public class RefDictionary
+	public class RefDictionaryTest
 	{
-		Dictionary<string, int> dictionary;
+		RefDictionary dictionary;
 
 		[SetUp]
 		public void Init ()
 		{
-			dictionary = new Dictionary<string, int> ();
+			dictionary = new RefDictionary ();
 		}
 
 		[Test ()]
 		public void WillAddNewWordToDictionary ()
 		{
-			Assert.AreEqual("Hello: 1", dictionary.AddWord("Hello"));
+			dictionary.AddWord ("Hello");
+			Assert.AreEqual(1, dictionary.NumberOfUniqueWords());
 		}
 	}
 }
