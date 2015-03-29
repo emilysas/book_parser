@@ -28,6 +28,14 @@ namespace book_parser
 			dictionary.AddWord ("Hello");
 			Assert.AreEqual ("Hello: 1\n", dictionary.GetContents ());
 		}
+
+		[Test ()]
+		public void WillNotAddExistingWordToDictionary ()
+		{
+			dictionary.AddWord ("Hello");
+			dictionary.AddWord ("Hello");
+			Assert.AreEqual(1, dictionary.NumberOfUniqueWords());
+		}
 	}
 }
 
