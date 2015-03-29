@@ -34,11 +34,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Test.cs" />
     <Compile Include="refdictionary.cs" />
+    <Compile Include="textparser.cs" />
+    <Compile Include="refdictionarytest.cs" />
+    <Compile Include="textparsertest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="ExampleTextFile.txt" />
   </ItemGroup>
 </Project>

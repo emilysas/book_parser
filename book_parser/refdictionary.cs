@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections;
 using System.Collections.Concurrent;
-using System.Linq; 
 using System.Text;
 
 namespace book_parser
@@ -38,10 +36,6 @@ namespace book_parser
 			return word_data.ToString();
 		}
 
-		public void WriteDataToConsole(string word_data)
-		{
-			Console.WriteLine (GetContents());
-		}
 	}
 }
 
