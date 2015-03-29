@@ -23,10 +23,10 @@ namespace book_parser
 		}
 
 		[Test ()]
-		public void CanShowContentsOfDictionary ()
+		public void CanExtractContentsOfDictionary ()
 		{
 			dictionary.AddWord ("Hello");
-			Assert.AreEqual ("Hello: 1", dictionary.ShowContents ());
+			Assert.AreEqual ("Hello: 1\n", dictionary.GetContents ());
 		}
 	}
 }

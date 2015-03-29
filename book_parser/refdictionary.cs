@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
+using System.Linq; 
+using System.Text;
 
 namespace book_parser
 {
@@ -20,6 +23,23 @@ namespace book_parser
 		public int NumberOfUniqueWords()
 		{
 			return dictionary.Count;
+		}
+
+		public string GetContents ()
+		{
+			StringBuilder word_data = new StringBuilder ();
+			foreach (KeyValuePair<string, int> item in dictionary) {
+				word_data.Append (item.Key)
+					.Append( ": ")
+					.Append (item.Value)
+					.Append ("\n");
+			}
+			return word_data.ToString();
+		}
+
+		public void WriteDataToConsole(string word_data)
+		{
+			Console.WriteLine (GetContents());
 		}
 	}
 }
