@@ -1,0 +1,2 @@
+/Users/Emily/Projects/book_parser/book_parser/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/Emily/Projects/book_parser/book_parser/bin/Debug/nunit.framework.dll
