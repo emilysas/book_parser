@@ -21,6 +21,13 @@ namespace book_parser
 			dictionary.AddWord ("Hello");
 			Assert.AreEqual(1, dictionary.NumberOfUniqueWords());
 		}
+
+		[Test ()]
+		public void CanShowContentsOfDictionary ()
+		{
+			dictionary.AddWord ("Hello");
+			Assert.AreEqual ("Hello: 1", dictionary.ShowContents ());
+		}
 	}
 }
 
