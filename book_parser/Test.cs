@@ -32,8 +32,8 @@ namespace book_parser
 		[Test ()]
 		public void WillNotAddExistingWordToDictionary ()
 		{
-			dictionary.AddWord ("Hello");
-			dictionary.AddWord ("Hello");
+			dictionary.UpdateDictionary ("Hello");
+			dictionary.UpdateDictionary ("Hello");
 			Assert.AreEqual(1, dictionary.NumberOfUniqueWords());
 		}
 	}

@@ -15,9 +15,29 @@ namespace book_parser
 			dictionary = new Dictionary<string, int> ();	
 		}
 
+		public void UpdateDictionary(string word)
+		{
+			if (CheckForWord(word)){
+				UpdateWordCount (word);
+			} else {
+				AddWord (word);
+			}
+
+		}
+
+		public bool CheckForWord(string word)
+		{
+			return dictionary.ContainsKey (word);
+		}
+
 		public void AddWord (string word)
 		{
 			dictionary.Add (word, 1);
+		}
+
+		public void UpdateWordCount (string word)
+		{
+
 		}
 
 		public int NumberOfUniqueWords()
