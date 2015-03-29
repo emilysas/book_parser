@@ -18,14 +18,14 @@ namespace book_parser
 		[Test ()]
 		public void WillAddNewWordToDictionary ()
 		{
-			dictionary.AddWord ("Hello");
+			dictionary.UpdateDictionary ("Hello");
 			Assert.AreEqual(1, dictionary.NumberOfUniqueWords());
 		}
 
 		[Test ()]
 		public void CanExtractContentsOfDictionary ()
 		{
-			dictionary.AddWord ("Hello");
+			dictionary.UpdateDictionary ("Hello");
 			Assert.AreEqual ("Hello: 1\n", dictionary.GetContents ());
 		}
 

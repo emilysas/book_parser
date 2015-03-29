@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections;
+using System.Collections.Concurrent;
 using System.Linq; 
 using System.Text;
 
@@ -8,36 +9,16 @@ namespace book_parser
 {
 	public class RefDictionary
 	{
-		Dictionary<string, int> dictionary;
+		ConcurrentDictionary<string, int> dictionary;
 
 		public RefDictionary ()
 		{
-			dictionary = new Dictionary<string, int> ();	
+			dictionary = new ConcurrentDictionary<string, int> ();	
 		}
 
 		public void UpdateDictionary(string word)
 		{
-			if (CheckForWord(word)){
-				UpdateWordCount (word);
-			} else {
-				AddWord (word);
-			}
-
-		}
-
-		public bool CheckForWord(string word)
-		{
-			return dictionary.ContainsKey (word);
-		}
-
-		public void AddWord (string word)
-		{
-			dictionary.Add (word, 1);
-		}
-
-		public void UpdateWordCount (string word)
-		{
-
+			dictionary.AddOrUpdate(word, 1, (key, value) => value + 1);
 		}
 
 		public int NumberOfUniqueWords()
