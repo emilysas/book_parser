@@ -5,8 +5,10 @@ namespace book_parser
 {
 	public class TextParser
 	{
-		public TextParser ()
+		public Array GetWordArray (string path)
 		{
+			string wordstring = GetWords (path);
+			return CreateArrayOfWords(wordstring);
 		}
 
 		public string GetWords (string path)

@@ -4,9 +4,6 @@ namespace book_parser
 {
 	public class PrimeNumberCalculator
 	{
-		public PrimeNumberCalculator ()
-		{
-		}
 
 		public bool IsAPrimeNumber(ulong n)
 		{
