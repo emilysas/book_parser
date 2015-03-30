@@ -38,6 +38,8 @@
     <Compile Include="textparser.cs" />
     <Compile Include="refdictionarytest.cs" />
     <Compile Include="textparsertest.cs" />
+    <Compile Include="primecalctest.cs" />
+    <Compile Include="primecalc.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
