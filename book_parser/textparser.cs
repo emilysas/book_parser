@@ -14,6 +14,14 @@ namespace book_parser
 			string readText = File.ReadAllText(path);
 			return readText;
 		}
+
+		public Array CreateArrayOfWords (string wordstring)
+		{
+			string[] separators = {",", ".", "!", "?", ";", ":", " "};
+			string[] words = wordstring.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+			return words;
+		}
+			
 	}
 }
 

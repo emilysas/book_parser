@@ -59,7 +59,7 @@ namespace book_parser
 
 		public void WillCreateArrayOfStrings ()
 		{
-			Assert.AreEqual(wordarray, textparser.CreateArray("And then something went BUMP! How that bump made us jump! We looked! Then we saw him step in on the mat! We looked! And we saw him! The Cat in the Hat!"));
+			Assert.AreEqual(wordarray, textparser.CreateArrayOfWords("And then something went BUMP! How that bump made us jump! We looked! Then we saw him step in on the mat! We looked! And we saw him! The Cat in the Hat!"));
 		}
 
 	}
