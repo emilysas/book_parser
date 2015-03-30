@@ -20,6 +20,12 @@ namespace book_parser
 		{
 			Assert.True (calculator.IsAPrimeNumber (7));
 		}
+
+		[Test ()]
+		public void CanCalculateWhetherANumberIsNotPrime ()
+		{
+			Assert.False (calculator.IsAPrimeNumber (8));
+		}
 	}
 }
 
