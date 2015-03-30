@@ -13,11 +13,18 @@ namespace book_parser
 		{
 		}
 
-		[Test]
-		public void CanParseTextAndIterateThroughToReturnWordsFrequencies()
+		[Test ()]
+		public void CanExtractContentsOfDictionary ()
 		{
-			Program.RunWordsThroughDictionary ("../../testfiles/ExampleTextFile.txt");
-			StringAssert.Contains("cat: 100", Program.PrintToConsole ());
+			Program.RunWordsThroughDictionary("../../../ExampleTextFile.txt");
+			Assert.AreEqual ("Hello: 1\nWord: 1\n", Program.GetContents ());
+		}
+
+		[Test ()]
+		public void WillNoteIfPrime ()
+		{
+			Program.RunWordsThroughDictionary("../../../CatInTheHat.txt");
+			Assert.AreEqual("Cat: 25 Prime\n", Program.GetContents ());
 		}
 	}
 }

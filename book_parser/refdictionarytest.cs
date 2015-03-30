@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 using System;
-using System.Collections.Generic;
+
 
 namespace book_parser
 {
@@ -23,13 +23,6 @@ namespace book_parser
 		}
 
 		[Test ()]
-		public void CanExtractContentsOfDictionary ()
-		{
-			dictionary.UpdateDictionary ("Hello");
-			Assert.AreEqual ("Hello: 1\n", dictionary.GetContents ());
-		}
-
-		[Test ()]
 		public void WillNotAddExistingWordToDictionary ()
 		{
 			dictionary.UpdateDictionary ("Hello");
@@ -37,13 +30,14 @@ namespace book_parser
 			Assert.AreEqual(1, dictionary.NumberOfUniqueWords());
 		}
 
-		[Test ()]
-		public void WillIncreaseWordCount ()
-		{
-			dictionary.UpdateDictionary ("Hello");
-			dictionary.UpdateDictionary ("Hello");
-			Assert.AreEqual("Hello: 2\n", dictionary.GetContents ());
-		}
+//		[Test ()]
+//		public void WillIncreaseWordCount ()
+//		{
+//			dictionary.UpdateDictionary ("Hello");
+//			dictionary.UpdateDictionary ("Hello");
+//			Assert.AreEqual(2, dictionary.GetContents ());
+//		}
+
 	}
 }
 

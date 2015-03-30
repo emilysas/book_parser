@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Text;
+using System.Collections.Generic;
+using System.Collections.Concurrent;
 
 namespace book_parser
 {
@@ -14,6 +17,7 @@ namespace book_parser
 			parser = new TextParser ();
 			dictionary = new RefDictionary ();
 			calculator = new PrimeNumberCalculator ();
+
  		}
 
 		public static void RunWordsThroughDictionary(string path)
@@ -24,14 +28,28 @@ namespace book_parser
 			}
 		}
 
-		public static void GetData()
+		public static string GetContents ()
 		{
-			dictionary.GetContents ();
+			StringBuilder word_data = new StringBuilder ();
+			foreach (KeyValuePair<string, int> item in dictionary.Show()) {
+				word_data.Append (item.Key)
+					.Append ( ": ")
+					.Append (item.Value)
+					.Append (InformIfPrime(Convert.ToUInt64(item.Key)));
+			}
+			return word_data.ToString();
+		}
+
+		public static string InformIfPrime(ulong num)
+		{
+			if (calculator.IsAPrimeNumber(num))
+				return " Prime \n";
+			return "\n";
 		}
 
 		public static void PrintToConsole ()
 		{
-			Console.WriteLine (GetData());
+			Console.WriteLine (GetContents ());
 		}
 	}
 }

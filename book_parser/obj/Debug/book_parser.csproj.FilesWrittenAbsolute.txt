@@ -4,3 +4,7 @@
 /Users/Emily/Projects/book_parser/book_parser/bin/Debug/book_parser.dll
 /Users/Emily/Projects/book_parser/book_parser/obj/Debug/book_parser.dll
 /Users/Emily/Projects/book_parser/book_parser/obj/Debug/book_parser.dll.mdb
+/Users/Emily/Projects/book_parser/book_parser/bin/Debug/book_parser.exe.mdb
+/Users/Emily/Projects/book_parser/book_parser/bin/Debug/book_parser.exe
+/Users/Emily/Projects/book_parser/book_parser/obj/Debug/book_parser.exe
+/Users/Emily/Projects/book_parser/book_parser/obj/Debug/book_parser.exe.mdb
