@@ -11,14 +11,23 @@ namespace book_parser
 		static RefDictionary dictionary;
 		static PrimeNumberCalculator calculator;
 		static Array words;
+//		static string fileName;
 
 		public static void Main (string[] args)
 		{
 			parser = new TextParser ();
 			dictionary = new RefDictionary ();
 			calculator = new PrimeNumberCalculator ();
-
+//			string fileName = GetInputFromUser ();
+			RunWordsThroughDictionary ("../../testfiles/CatInTheHat.txt");
+			PrintToConsole ();
  		}
+
+//		private static string GetInputFromUser ()
+//		{
+//			Console.WriteLine ("Please enter the path of the file that you'd like to read");
+//			return Console.ReadLine ();
+//		}
 
 		public static void RunWordsThroughDictionary(string path)
 		{
@@ -35,12 +44,12 @@ namespace book_parser
 				word_data.Append (item.Key)
 					.Append ( ": ")
 					.Append (item.Value)
-					.Append (InformIfPrime(Convert.ToUInt64(item.Key)));
+					.Append (InformIfPrime((ulong)item.Value));
 			}
 			return word_data.ToString();
 		}
 
-		public static string InformIfPrime(ulong num)
+		private static string InformIfPrime(ulong num)
 		{
 			if (calculator.IsAPrimeNumber(num))
 				return " Prime \n";
