@@ -1,1 +1,20 @@
-﻿<Properties StartupItem="book_parser/book_parser.csproj" />
+﻿<Properties StartupItem="book_parser/book_parser.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="book_parser/textparsertest.cs">
+    <Files>
+      <File FileName="book_parser/refdictionarytest.cs" Line="23" Column="4" />
+      <File FileName="book_parser/refdictionary.cs" Line="3" Column="1" />
+      <File FileName="book_parser/textparser.cs" Line="16" Column="37" />
+      <File FileName="book_parser/textparsertest.cs" Line="13" Column="22" />
+    </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

@@ -1,11 +1,18 @@
 ﻿using System;
+using System.IO;
 
 namespace book_parser
 {
-	public class textparser
+	public class TextParser
 	{
-		public textparser ()
+		public TextParser ()
 		{
+		}
+
+		public string GetWords (string path)
+		{
+			string readText = File.ReadAllText(path);
+			return readText;
 		}
 	}
 }

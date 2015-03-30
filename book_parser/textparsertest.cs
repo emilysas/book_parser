@@ -8,19 +8,17 @@ namespace book_parser
 	public class TextParserTest
 	{
 		TextParser textparser;
-		string[] textarray;
 
 		[SetUp]
 		public void Init ()
 		{
 			textparser = new TextParser ();
-			textarray = new Array {"hello", "world"};
 		}
 
 		[Test ()]
-		public void WillParseTextFileAndCreateArrayOfWords ()
+		public void WillParseTextFileAndReturnString ()
 		{
-			Assert.AreEqual(textarray, textparser.GetWords());
+			Assert.AreEqual("hello world", textparser.GetWords("../../testfiles/ExampleTextFile.txt"));
 		}
 
 	}
