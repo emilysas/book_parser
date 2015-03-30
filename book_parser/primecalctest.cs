@@ -26,6 +26,12 @@ namespace book_parser
 		{
 			Assert.False (calculator.IsAPrimeNumber (8));
 		}
+
+		[Test ()]
+		public void CanCalculateWhetherAVeryLargeNumberIsAPrime ()
+		{
+			Assert.True (calculator.IsAPrimeNumber (179426549));
+		}
 	}
 }
 
