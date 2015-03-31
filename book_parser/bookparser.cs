@@ -27,6 +27,11 @@ namespace book_parser
 		{
 			Console.WriteLine ("Please input the filename that you would like to read");
 			string input = Console.ReadLine ();
+			CheckFile (input);
+		}
+
+		private static void CheckFile(string input)
+		{
 			if (File.Exists (input)) {
 				fileName = input;
 			} else {
