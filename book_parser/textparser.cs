@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace book_parser
 {
@@ -7,7 +8,8 @@ namespace book_parser
 	{
 		public Array GetWordArray (string path)
 		{
-			string wordstring = GetWords (path);
+			string textstring = GetWords (path);
+			string wordstring = RemoveUnwantedCharacters (textstring);
 			return CreateArrayOfWords(wordstring);
 		}
 
@@ -17,10 +19,15 @@ namespace book_parser
 			return readText;
 		}
 
-		public Array CreateArrayOfWords (string wordstring)
+		public string RemoveUnwantedCharacters(string allchars)
 		{
-			string[] separators = {",", ".", "!", "?", ";", ":", " "};
-			string[] words = wordstring.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+			string lowercasestring = allchars.ToLower();
+			return Regex.Replace (lowercasestring, @"[\W]", " ");
+		}
+
+		public Array CreateArrayOfWords (string stringofwords)
+		{
+			string[] words = stringofwords.Split ();
 			return words;
 		}
 			
