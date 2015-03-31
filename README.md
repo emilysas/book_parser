@@ -4,6 +4,8 @@ The brief is as follows:
 1. To write an application that outputs the individual words that appear in the book, and how many times that word appears in the text file.
 2. The second part is to also output whether the number of times each word appears is a prime number.
 
+![Screenshot1](screenshot.png?raw=true)
+
 ##Issues Faced
 
 Annoyingly, Xamarin stopped running all of my tests - despite having 11 tests it only runs 8. As such, I've had to cease TDD as I've no way to test other than to run the application!
