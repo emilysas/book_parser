@@ -7,7 +7,11 @@ The brief is as follows:
 
 ##Issues Faced
 
-Whilst all the component parts work, I'm struggling to pull it altogether in the Program class. I'm also struggling to write an integration test in NUnit. Finally, I realised that my PrimeNumberCalculator expects to receive integers/ulongs as arguments, and that Program is not going to receive these (instead receiving one long string that contains number strings). I am therefore going to have to think carefully about where I should call the PrimeNumberCalculator, and whether I need to change the ReferenceDictionary so that it contains the word frequencies as ulongs.
+Whilst all the component parts work, I'm struggling to pull it altogether in the Program class. I'm also struggling to write an integration test in NUnit. 
+
+At the moment, I hard code a file into the Program, but would like to get the user to input their own file.
+
+I realised that in replacing symbols with whitespace, I risk chopping up words where a symbol such as an apostrophe occurs mid-word.
 
 This has been a really interesting exercise, as a lot of the problems I had I originally put down to the perculiarities of C# but have since realised are just things that Ruby and Javascript have 'let me get away with'; I've learned a lot more about OOD as a result.
 
