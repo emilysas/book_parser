@@ -6,7 +6,7 @@ The brief is as follows:
 
 ##Issues Faced
 
-Whilst all the component parts work, I'm struggling to pull it altogether in the Program class. I'm also struggling to write an integration test in NUnit. 
+Annoyingly, Xamarin stopped running all of my tests - despite having 11 tests it only runs 8. As such, I've had to cease TDD as I've no way to test other than to run the application!
 
 At the moment, I hard code a file into the Program, but would like to get the user to input their own file.
 
