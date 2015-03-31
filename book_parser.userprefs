@@ -1,14 +1,15 @@
 ﻿<Properties StartupItem="book_parser/book_parser.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="book_parser/bookparser.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="book_parser/textparser.cs">
     <Files>
-      <File FileName="book_parser/bookparser.cs" Line="50" Column="4" />
-      <File FileName="book_parser/bookparsertest.cs" Line="1" Column="1" />
-      <File FileName="book_parser/refdictionary.cs" Line="1" Column="1" />
-      <File FileName="book_parser/textparser.cs" Line="16" Column="1" />
+      <File FileName="book_parser/bookparser.cs" Line="19" Column="46" />
+      <File FileName="book_parser/refdictionary.cs" Line="22" Column="15" />
+      <File FileName="book_parser/textparser.cs" Line="30" Column="31" />
       <File FileName="book_parser/primecalc.cs" Line="1" Column="1" />
-      <File FileName="book_parser/refdictionarytest.cs" Line="1" Column="1" />
-      <File FileName="book_parser/textparsertest.cs" Line="1" Column="1" />
+      <File FileName="book_parser/refdictionarytest.cs" Line="28" Column="42" />
+      <File FileName="book_parser/bookparsertest.cs" Line="1" Column="1" />
+      <File FileName="book_parser/primecalctest.cs" Line="15" Column="44" />
+      <File FileName="book_parser/textparsertest.cs" Line="73" Column="2" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.NUnit.TestPad">

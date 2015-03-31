@@ -8,9 +8,9 @@ namespace book_parser
 	{
 		public Array GetWordArray (string path)
 		{
-			string textstring = GetWords (path);
-			string wordstring = RemoveUnwantedCharacters (textstring);
-			return CreateArrayOfWords(wordstring);
+			string textString = GetWords (path);
+			string wordString = RemoveUnwantedCharacters (textString);
+			return CreateArrayOfWords(wordString);
 		}
 
 		public string GetWords (string path)
@@ -19,15 +19,15 @@ namespace book_parser
 			return readText;
 		}
 
-		public string RemoveUnwantedCharacters(string allchars)
+		public string RemoveUnwantedCharacters(string allChars)
 		{
-			string lowercasestring = allchars.ToLower();
-			return Regex.Replace (lowercasestring, @"[\W]", " ");
+			string lowerCaseString = allChars.ToLower();
+			return Regex.Replace (lowerCaseString, @"[\W]", " ");
 		}
 
-		public Array CreateArrayOfWords (string stringofwords)
+		public Array CreateArrayOfWords (string stringOfWords)
 		{
-			string[] words = stringofwords.Split (new char[0], StringSplitOptions.RemoveEmptyEntries);
+			string[] words = stringOfWords.Split (new char[0], StringSplitOptions.RemoveEmptyEntries);
 			return words;
 		}
 			

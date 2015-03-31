@@ -32,14 +32,14 @@ namespace book_parser
 
 		public static string GetContents ()
 		{
-			StringBuilder word_data = new StringBuilder ();
+			StringBuilder wordData = new StringBuilder ();
 			foreach (KeyValuePair<string, int> item in dictionary.Show()) {
-				word_data.Append (item.Key)
+				wordData.Append (item.Key)
 					.Append ( ": ")
 					.Append (item.Value)
 					.Append (InformIfPrime((ulong)item.Value));
 			}
-			return word_data.ToString();
+			return wordData.ToString();
 		}
 
 		private static string InformIfPrime(ulong num)

@@ -27,16 +27,8 @@ namespace book_parser
 		{
 			dictionary.UpdateDictionary ("Hello");
 			dictionary.UpdateDictionary ("Hello");
-			Assert.AreEqual(1, dictionary.Show().Count);
+			Assert.AreEqual (1, dictionary.Show ().Count);
 		}
-
-//		[Test ()]
-//		public void WillIncreaseWordCount ()
-//		{
-//			dictionary.UpdateDictionary ("Hello");
-//			dictionary.UpdateDictionary ("Hello");
-//			Assert.AreEqual(2, dictionary.GetContents ());
-//		}
 
 	}
 }
