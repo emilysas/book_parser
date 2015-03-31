@@ -19,7 +19,7 @@ namespace book_parser
 		public void WillAddNewWordToDictionary ()
 		{
 			dictionary.UpdateDictionary ("Hello");
-			Assert.AreEqual(1, dictionary.NumberOfUniqueWords());
+			Assert.AreEqual(1, dictionary.Show().Count);
 		}
 
 		[Test ()]
@@ -27,7 +27,7 @@ namespace book_parser
 		{
 			dictionary.UpdateDictionary ("Hello");
 			dictionary.UpdateDictionary ("Hello");
-			Assert.AreEqual(1, dictionary.NumberOfUniqueWords());
+			Assert.AreEqual(1, dictionary.Show().Count);
 		}
 
 //		[Test ()]

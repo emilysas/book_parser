@@ -27,7 +27,7 @@ namespace book_parser
 
 		public Array CreateArrayOfWords (string stringofwords)
 		{
-			string[] words = stringofwords.Split ();
+			string[] words = stringofwords.Split (new char[0], StringSplitOptions.RemoveEmptyEntries);
 			return words;
 		}
 			

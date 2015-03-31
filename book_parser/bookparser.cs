@@ -11,29 +11,22 @@ namespace book_parser
 		static RefDictionary dictionary;
 		static PrimeNumberCalculator calculator;
 		static Array words;
-//		static string fileName;
 
 		public static void Main (string[] args)
 		{
 			parser = new TextParser ();
 			dictionary = new RefDictionary ();
 			calculator = new PrimeNumberCalculator ();
-//			string fileName = GetInputFromUser ();
 			RunWordsThroughDictionary ("../../testfiles/CatInTheHat.txt");
 			PrintToConsole ();
  		}
 
-//		private static string GetInputFromUser ()
-//		{
-//			Console.WriteLine ("Please enter the path of the file that you'd like to read");
-//			return Console.ReadLine ();
-//		}
 
 		public static void RunWordsThroughDictionary(string path)
 		{
 			words = parser.GetWordArray(path);
 			foreach (string word in words) {
-				dictionary.UpdateDictionary(word);
+				dictionary.UpdateDictionary (word);
 			}
 		}
 
