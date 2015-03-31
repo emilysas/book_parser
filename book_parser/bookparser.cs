@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 using System.Collections.Generic;
-using System.Collections.Concurrent;
+using System.IO;
 
 namespace book_parser
 {
@@ -11,16 +11,28 @@ namespace book_parser
 		static RefDictionary dictionary;
 		static PrimeNumberCalculator calculator;
 		static Array words;
+		static string fileName;
 
 		public static void Main (string[] args)
 		{
 			parser = new TextParser ();
 			dictionary = new RefDictionary ();
 			calculator = new PrimeNumberCalculator ();
-			RunWordsThroughDictionary ("../../testfiles/CatInTheHat.txt");
+			GetFile ();
+			RunWordsThroughDictionary (fileName);
 			PrintToConsole ();
  		}
 
+		public static void GetFile()
+		{
+			Console.WriteLine ("Please input the filename that you would like to read");
+			string input = Console.ReadLine ();
+			if (File.Exists (input)) {
+				fileName = input;
+			} else {
+				GetFile ();
+			}
+		}
 
 		public static void RunWordsThroughDictionary(string path)
 		{
