@@ -60,7 +60,7 @@ namespace book_parser
 		[Test ()]
 		public void WillRemoveUnwantedChars ()
 		{
-			Assert.AreEqual ("hello how are you", textparser.RemoveUnwantedCharacters ("HELLO, how are you?!?!"));
+			Assert.AreEqual ("hello  how are you    ", textparser.RemoveUnwantedCharacters ("HELLO, how are you?!?!"));
 		}
 
 		[Test ()]
