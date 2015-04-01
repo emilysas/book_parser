@@ -10,6 +10,7 @@ namespace book_parser
 		TextParser parser;
 		RefDictionary dictionary;
 		PrimeNumberCalculator calculator;
+		string output;
 
 		[SetUp]
 		public void Init ()
@@ -30,7 +31,7 @@ namespace book_parser
 		public void WillNoteIfPrime ()
 		{
 			Program.RunWordsThroughDictionary(parser, dictionary, "../../testfiles/CatInTheHat.txt");
-			Assert.That(Program.GetContents (dictionary, calculator), HasMember "big: 5 Prime \n");
+			Assert.That(Program.GetContents (dictionary, calculator), Is.StringContaining("big: 5 Prime"));
 		}
 	}
 }

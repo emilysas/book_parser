@@ -23,7 +23,7 @@ namespace book_parser
 			PrintToConsole (dictionary, calculator);
  		}
 
-		public static void GetFile()
+		private static void GetFile()
 		{
 			Console.WriteLine ("Please input the filename that you would like to read");
 			string input = Console.ReadLine ();
@@ -66,7 +66,7 @@ namespace book_parser
 			return "\n";
 		}
 
-		public static void PrintToConsole (RefDictionary dictionary, PrimeNumberCalculator calculator)
+		private static void PrintToConsole (RefDictionary dictionary, PrimeNumberCalculator calculator)
 		{
 			Console.WriteLine (GetContents (dictionary, calculator));
 		}
