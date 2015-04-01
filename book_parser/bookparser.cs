@@ -19,8 +19,8 @@ namespace book_parser
 			dictionary = new RefDictionary ();
 			calculator = new PrimeNumberCalculator ();
 			GetFile ();
-			RunWordsThroughDictionary (fileName);
-			PrintToConsole ();
+			RunWordsThroughDictionary (parser, dictionary, fileName);
+			PrintToConsole (dictionary, calculator);
  		}
 
 		public static void GetFile()
@@ -39,7 +39,7 @@ namespace book_parser
 			}
 		}
 
-		public static void RunWordsThroughDictionary(string path)
+		public static void RunWordsThroughDictionary(TextParser parser, RefDictionary dictionary, string path)
 		{
 			words = parser.GetWordArray(path);
 			foreach (string word in words) {
@@ -47,28 +47,28 @@ namespace book_parser
 			}
 		}
 
-		public static string GetContents ()
+		public static string GetContents (RefDictionary dictionary, PrimeNumberCalculator calculator)
 		{
 			StringBuilder wordData = new StringBuilder ();
 			foreach (KeyValuePair<string, int> item in dictionary.Show()) {
 				wordData.Append (item.Key)
 					.Append ( ": ")
 					.Append (item.Value)
-					.Append (InformIfPrime((ulong)item.Value));
+					.Append (InformIfPrime(calculator, (ulong)item.Value));
 			}
 			return wordData.ToString();
 		}
 
-		private static string InformIfPrime(ulong num)
+		private static string InformIfPrime(PrimeNumberCalculator calculator, ulong num)
 		{
 			if (calculator.IsAPrimeNumber(num))
 				return " Prime \n";
 			return "\n";
 		}
 
-		public static void PrintToConsole ()
+		public static void PrintToConsole (RefDictionary dictionary, PrimeNumberCalculator calculator)
 		{
-			Console.WriteLine (GetContents ());
+			Console.WriteLine (GetContents (dictionary, calculator));
 		}
 	}
 }
