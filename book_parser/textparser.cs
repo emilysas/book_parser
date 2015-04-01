@@ -6,6 +6,7 @@ namespace book_parser
 {
 	public class TextParser
 	{
+
 		public Array GetWordArray (string path)
 		{
 			string textString = GetWords (path);
